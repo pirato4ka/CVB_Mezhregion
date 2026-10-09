@@ -52,6 +52,13 @@
 - Регистр ЦеныБлюд: ресурс `Цена` перенесен перед измерением `Блюдо` (порядок по схеме InformationRegisterChildObjects).
 - Документ Заказ: в ChildObjects форма `ФормаДокумента` перенесена перед табличной частью `Состав` (порядок по схеме DocumentChildObjects); у табличной части `Состав` добавлен `InternalInfo` с GeneratedType `DocumentTabularSection` / `DocumentTabularSectionRow`.
 
+- Схемы компоновки данных (4 отчета), ошибка загрузки «Ошибка преобразования данных XDTO: НачалоСвойства: version ... anySimpleType»:
+  - удален атрибут `version="2.21"` у корня `<DataCompositionSchema>` (в XSD 2.21 у этого типа атрибутов нет; штамп версии относится только к `MetaDataObject`);
+  - значение `EndOfThisMonth` заменено на `BeginningOfThisDay` (в XSD допустимы только варианты `BeginningOf…` для `StandardBeginningDateVariant`; для «конца периода» по умолчанию берется текущий день, `КОНЕЦПЕРИОДА(…, ДЕНЬ)` от него дает конец дня);
+  - `<appearance>` (формат ресурса) вынесен из `<totalField>` (недопустим в XSD) в `<dcsset:conditionalAppearance>` настроек варианта;
+  - `<dcsset:dataParameters>` перенесен перед `<dcsset:item>` (порядок элементов `Settings` по XSD: selection, filter, dataParameters, order, conditionalAppearance, outputParameters, item).
+- Проверка СКД по XSD 2.21 (`skd-validate` с подключенными схемами) проходит для всех 4 макетов; до исправления она давала 4–5 ошибок на макет.
+
 ## Что остается до сдачи
 
 1. Загрузить выгрузку в конфигуратор 8.5.1 («Загрузить конфигурацию из файлов») и выполнить «Проверку конфигурации» без ошибок.
