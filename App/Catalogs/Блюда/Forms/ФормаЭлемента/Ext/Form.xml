@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаОсновная" id="28">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОсновнаяРасширеннаяПодсказка" id="29"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаФото" id="10">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаФотоРасширеннаяПодсказка" id="11"/>
+					<ChildItems>
+						<PictureField name="КартинкаБлюда" id="1">
+							<DataPath>АдресФотографии</DataPath>
+							<PictureSize>Proportionally</PictureSize>
+							<Width>30</Width>
+							<Height>15</Height>
+							<ContextMenu name="КартинкаБлюдаКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="КартинкаБлюдаРасширеннаяПодсказка" id="3"/>
+						</PictureField>
+						<UsualGroup name="ГруппаКнопкиФото" id="8">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКнопкиФотоРасширеннаяПодсказка" id="9"/>
+							<ChildItems>
+								<Button name="ВыбратьФото" id="4">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ВыбратьФото</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выбрать фото</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Загрузить изображение JPG или PNG</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ВыбратьФотоРасширеннаяПодсказка" id="5"/>
+								</Button>
+								<Button name="УдалитьФото" id="6">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.УдалитьФото</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Удалить фото</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Убрать фотографию из карточки блюда</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="УдалитьФотоРасширеннаяПодсказка" id="7"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаРеквизиты" id="26">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаРеквизитыРасширеннаяПодсказка" id="27"/>
+					<ChildItems>
+						<InputField name="Наименование" id="12">
+							<DataPath>Объект.Description</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Наименование</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Название блюда в меню</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ContextMenu name="НаименованиеКонтекстноеМеню" id="13"/>
+							<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="14"/>
+						</InputField>
+						<InputField name="Ресторан" id="15">
+							<DataPath>Объект.Ресторан</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ресторан</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ресторан, в меню которого есть блюдо</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ContextMenu name="РесторанКонтекстноеМеню" id="16"/>
+							<ExtendedTooltip name="РесторанРасширеннаяПодсказка" id="17"/>
+						</InputField>
+						<InputField name="Категория" id="18">
+							<DataPath>Объект.Категория</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Категория</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Категория блюда для группировки в меню</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ContextMenu name="КатегорияКонтекстноеМеню" id="19"/>
+							<ExtendedTooltip name="КатегорияРасширеннаяПодсказка" id="20"/>
+						</InputField>
+						<CheckBoxField name="ЕстьФотография" id="21">
+							<DataPath>Объект.ЕстьФотография</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Есть фотография</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ЕстьФотографияКонтекстноеМеню" id="22"/>
+							<ExtendedTooltip name="ЕстьФотографияРасширеннаяПодсказка" id="23"/>
+						</CheckBoxField>
+						<Button name="УстановитьЦену" id="24">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.УстановитьЦену</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Установить цену</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Открыть регистр ЦеныБлюд для этого блюда (записать блюдо перед установкой цены)</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="УстановитьЦенуРасширеннаяПодсказка" id="25"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="30">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Блюда</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="АдресФотографии" id="31">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВыбратьФото" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать фото</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ВыбратьФото</Action>
+		</Command>
+		<Command name="УдалитьФото" id="33">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить фото</v8:content>
+				</v8:item>
+			</Title>
+			<Action>УдалитьФото</Action>
+		</Command>
+		<Command name="УстановитьЦену" id="34">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить цену</v8:content>
+				</v8:item>
+			</Title>
+			<Action>УстановитьЦену</Action>
+		</Command>
+	</Commands>
+</Form>
