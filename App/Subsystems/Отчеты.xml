@@ -17,6 +17,9 @@
 			<Picture/>
 			<Content>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетПоЗаказам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетПоРесторанам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОтчетПоКурьерам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ПопулярностьБлюд</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

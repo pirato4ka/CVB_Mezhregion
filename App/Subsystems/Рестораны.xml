@@ -15,10 +15,10 @@
 			<UseOneCommand>false</UseOneCommand>
 			<Explanation/>
 			<Picture/>
-			<Content/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Рестораны</xr:Item>
+			</Content>
 		</Properties>
-		<ChildObjects>
-			<Subsystem>Справочники</Subsystem>
-		</ChildObjects>
+		<ChildObjects/>
 	</Subsystem>
 </MetaDataObject>

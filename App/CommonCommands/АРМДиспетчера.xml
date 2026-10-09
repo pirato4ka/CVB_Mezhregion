@@ -12,13 +12,18 @@
 			<Comment/>
 			<Group>ActionsPanelTools</Group>
 			<Representation>Auto</Representation>
-			<ToolTip/>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рабочее место диспетчера: заказы в работе, курьеры, назначение курьера в один клик</v8:content>
+				</v8:item>
+			</ToolTip>
 			<Picture/>
 			<Shortcut/>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<CommandParameterType/>
 			<ParameterUseMode>Single</ParameterUseMode>
-			<ModifiesData>false</ModifiesData>
+			<ModifiesData>true</ModifiesData>
 			<OnMainServerUnavalableBehavior>Auto</OnMainServerUnavalableBehavior>
 		</Properties>
 	</CommonCommand>

@@ -270,8 +270,7 @@
 			<Role>Диспетчер</Role>
 			<CommonModule>УправлениеДоставкой</CommonModule>
 			<CommonCommand>АРМДиспетчера</CommonCommand>
-			<CommonForm>Форма</CommonForm>
-			<Catalog>Рестораны</Catalog>
+				<Catalog>Рестораны</Catalog>
 			<Catalog>КатегорииБлюд</Catalog>
 			<Catalog>Блюда</Catalog>
 			<Catalog>Клиенты</Catalog>

@@ -17,9 +17,8 @@
 			<Picture/>
 			<Content>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Курьеры</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.Форма</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.АРМДиспетчера</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">5c2778db-e4bc-4f0b-bbb9-478660150a05</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипыТранспорта</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СтатусыКурьеров</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>
