@@ -489,7 +489,18 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
+			<Form>ФормаДокумента</Form>
 			<TabularSection uuid="1e9cbd6a-5da4-5d85-8029-4319bac5e600">
+				<InternalInfo>
+					<xr:GeneratedType name="DocumentTabularSection.Заказ.Состав" category="TabularSection">
+						<xr:TypeId>6640bdbb-8921-448b-b47e-c17e60435dd2</xr:TypeId>
+						<xr:ValueId>fd96f4b3-15ca-4e5e-9443-94d53070e8eb</xr:ValueId>
+					</xr:GeneratedType>
+					<xr:GeneratedType name="DocumentTabularSectionRow.Заказ.Состав" category="TabularSectionRow">
+						<xr:TypeId>806a6a8b-eccb-4e0c-9317-a17456825813</xr:TypeId>
+						<xr:ValueId>3117e454-fedb-40ec-b8dd-c79276451760</xr:ValueId>
+					</xr:GeneratedType>
+				</InternalInfo>
 				<Properties>
 					<Name>Состав</Name>
 					<Synonym>
@@ -662,7 +673,6 @@
 					</Attribute>
 				</ChildObjects>
 			</TabularSection>
-			<Form>ФормаДокумента</Form>
 		</ChildObjects>
 	</Document>
 </MetaDataObject>
