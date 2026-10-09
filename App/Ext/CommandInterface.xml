@@ -2,9 +2,9 @@
 <CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
 	<SubsystemsOrder>
 		<Subsystem>Subsystem.Заказы</Subsystem>
-		<Subsystem>Subsystem.Курьер</Subsystem>
+		<Subsystem>Subsystem.Курьеры</Subsystem>
 		<Subsystem>Subsystem.Меню</Subsystem>
 		<Subsystem>Subsystem.Отчеты</Subsystem>
-		<Subsystem>Subsystem.Ресторан</Subsystem>
+		<Subsystem>Subsystem.Рестораны</Subsystem>
 	</SubsystemsOrder>
 </CommandInterface>

@@ -5,18 +5,31 @@
 		<dataSourceType>Local</dataSourceType>
 	</dataSource>
 	<dataSet xsi:type="DataSetQuery">
-		<name>ПродажиПоРесторанам</name>
+		<name>Доставки</name>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>Ресторан</dataPath>
-			<field>Ресторан</field>
+			<dataPath>Курьер</dataPath>
+			<field>Курьер</field>
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Ресторан</v8:content>
+					<v8:content>Курьер</v8:content>
 				</v8:item>
 			</title>
 			<valueType>
-				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Рестораны</v8:Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Курьеры</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипТранспорта</dataPath>
+			<field>ТипТранспорта</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип транспорта</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:EnumRef.ТипыТранспорта</v8:Type>
 			</valueType>
 		</field>
 		<field xsi:type="DataSetFieldField">
@@ -49,29 +62,37 @@
 			</valueType>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>Клиент</dataPath>
-			<field>Клиент</field>
+			<dataPath>ФактическоеВремяДоставки</dataPath>
+			<field>ФактическоеВремяДоставки</field>
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Клиент</v8:content>
+					<v8:content>Фактическое время доставки</v8:content>
 				</v8:item>
 			</title>
 			<valueType>
-				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Клиенты</v8:Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
 			</valueType>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>Статус</dataPath>
-			<field>Статус</field>
+			<dataPath>ВремяДоставкиМинут</dataPath>
+			<field>ВремяДоставкиМинут</field>
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Статус</v8:content>
+					<v8:content>Время доставки, мин</v8:content>
 				</v8:item>
 			</title>
 			<valueType>
-				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:EnumRef.СтатусыЗаказов</v8:Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
 			</valueType>
 		</field>
 		<field xsi:type="DataSetFieldField">
@@ -105,29 +126,31 @@
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
-	Заказ.Ресторан КАК Ресторан,
+	Заказ.Курьер КАК Курьер,
+	Заказ.Курьер.ТипТранспорта КАК ТипТранспорта,
 	Заказ.Ссылка КАК Заказ,
 	Заказ.Дата КАК Дата,
-	Заказ.Клиент КАК Клиент,
-	Заказ.Статус КАК Статус,
+	Заказ.ФактическоеВремяДоставки КАК ФактическоеВремяДоставки,
+	Заказ.ВремяДоставкиМинут КАК ВремяДоставкиМинут,
 	Заказ.СуммаДокумента КАК СуммаДокумента
 ИЗ
 	Документ.Заказ КАК Заказ
 ГДЕ
 	Заказ.Дата МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
-	И Заказ.Статус &lt;&gt; ЗНАЧЕНИЕ(Перечисление.СтатусыЗаказов.Отменен)</query>
+	И Заказ.Статус = ЗНАЧЕНИЕ(Перечисление.СтатусыЗаказов.Доставлен)
+	И Заказ.Курьер &lt;&gt; ЗНАЧЕНИЕ(Справочник.Курьеры.ПустаяСсылка)</query>
 	</dataSet>
 	<totalField>
-		<dataPath>КоличествоЗаказов</dataPath>
+		<dataPath>ВыполненоДоставок</dataPath>
 		<expression>Количество(Заказ)</expression>
 	</totalField>
 	<totalField>
-		<dataPath>ОбщаяСуммаПродаж</dataPath>
-		<expression>Сумма(СуммаДокумента)</expression>
+		<dataPath>СреднееВремяДоставкиМин</dataPath>
+		<expression>Среднее(ВремяДоставкиМинут)</expression>
 	</totalField>
 	<totalField>
-		<dataPath>СреднийЧек</dataPath>
-		<expression>Среднее(СуммаДокумента)</expression>
+		<dataPath>СуммаДоставок</dataPath>
+		<expression>Сумма(СуммаДокумента)</expression>
 	</totalField>
 	<parameter>
 		<name>Период</name>
@@ -191,19 +214,19 @@
 		<dcsset:presentation xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Отчет по ресторанам</v8:content>
+				<v8:content>Отчет по курьерам</v8:content>
 			</v8:item>
 		</dcsset:presentation>
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
 			<dcsset:selection>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>Ресторан</dcsset:field>
+					<dcsset:field>Курьер</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>КоличествоЗаказов</dcsset:field>
+					<dcsset:field>ВыполненоДоставок</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>ОбщаяСуммаПродаж</dcsset:field>
+					<dcsset:field>СреднееВремяДоставкиМин</dcsset:field>
 				</dcsset:item>
 			</dcsset:selection>
 			<dcsset:dataParameters>
@@ -212,7 +235,7 @@
 					<dcscor:value xsi:type="v8:StandardPeriod">
 						<v8:variant xsi:type="v8:StandardPeriodVariant">ThisYear</v8:variant>
 					</dcscor:value>
-					<dcsset:userSettingID>d2c056d9-0078-48a4-835f-11728fc590cb</dcsset:userSettingID>
+					<dcsset:userSettingID>4bbc028f-8a01-41c1-92ba-d670f1da3288</dcsset:userSettingID>
 					<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -223,17 +246,40 @@
 			</dcsset:dataParameters>
 			<dcsset:order>
 				<dcsset:item xsi:type="dcsset:OrderItemField">
-					<dcsset:field>ОбщаяСуммаПродаж</dcsset:field>
+					<dcsset:field>ВыполненоДоставок</dcsset:field>
 					<dcsset:orderType>Desc</dcsset:orderType>
 				</dcsset:item>
 			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>СреднееВремяДоставкиМин</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">СреднееВремяДоставкиМин</dcsset:left>
+							<dcsset:comparisonType>Greater</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:decimal">60</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">web:DarkRed</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:presentation xsi:type="xs:string">Доставки дольше часа выделять красным</dcsset:presentation>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
 			<dcsset:outputParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:parameter>Заголовок</dcscor:parameter>
 					<dcscor:value xsi:type="v8:LocalStringType">
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Продажи по ресторанам (без отмененных заказов)</v8:content>
+							<v8:content>Выполненные доставки по курьерам</v8:content>
 						</v8:item>
 					</dcscor:value>
 				</dcscor:item>
@@ -245,7 +291,14 @@
 			<dcsset:item xsi:type="dcsset:StructureItemGroup">
 				<dcsset:groupItems>
 					<dcsset:item xsi:type="dcsset:GroupItemField">
-						<dcsset:field>Ресторан</dcsset:field>
+						<dcsset:field>Курьер</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ТипТранспорта</dcsset:field>
 						<dcsset:groupType>Items</dcsset:groupType>
 						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
 						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
@@ -254,22 +307,25 @@
 				</dcsset:groupItems>
 				<dcsset:order>
 					<dcsset:item xsi:type="dcsset:OrderItemField">
-						<dcsset:field>ОбщаяСуммаПродаж</dcsset:field>
+						<dcsset:field>ВыполненоДоставок</dcsset:field>
 						<dcsset:orderType>Desc</dcsset:orderType>
 					</dcsset:item>
 				</dcsset:order>
 				<dcsset:selection>
 					<dcsset:item xsi:type="dcsset:SelectedItemField">
-						<dcsset:field>Ресторан</dcsset:field>
+						<dcsset:field>Курьер</dcsset:field>
 					</dcsset:item>
 					<dcsset:item xsi:type="dcsset:SelectedItemField">
-						<dcsset:field>КоличествоЗаказов</dcsset:field>
+						<dcsset:field>ТипТранспорта</dcsset:field>
 					</dcsset:item>
 					<dcsset:item xsi:type="dcsset:SelectedItemField">
-						<dcsset:field>ОбщаяСуммаПродаж</dcsset:field>
+						<dcsset:field>ВыполненоДоставок</dcsset:field>
 					</dcsset:item>
 					<dcsset:item xsi:type="dcsset:SelectedItemField">
-						<dcsset:field>СреднийЧек</dcsset:field>
+						<dcsset:field>СреднееВремяДоставкиМин</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаДоставок</dcsset:field>
 					</dcsset:item>
 				</dcsset:selection>
 				<dcsset:item xsi:type="dcsset:StructureItemGroup">
@@ -287,21 +343,21 @@
 							<dcsset:field>Заказ</dcsset:field>
 						</dcsset:item>
 						<dcsset:item xsi:type="dcsset:SelectedItemField">
-							<dcsset:field>Клиент</dcsset:field>
+							<dcsset:field>ФактическоеВремяДоставки</dcsset:field>
 						</dcsset:item>
 						<dcsset:item xsi:type="dcsset:SelectedItemField">
-							<dcsset:field>Статус</dcsset:field>
+							<dcsset:field>ВремяДоставкиМинут</dcsset:field>
 						</dcsset:item>
 						<dcsset:item xsi:type="dcsset:SelectedItemField">
 							<dcsset:field>СуммаДокумента</dcsset:field>
 						</dcsset:item>
 					</dcsset:selection>
 				</dcsset:item>
-				<dcsset:userSettingID>ff467b0a-0327-4b18-bf31-51198346b025</dcsset:userSettingID>
+				<dcsset:userSettingID>8830c481-9bc7-4fc1-a46d-55dfb4e94d42</dcsset:userSettingID>
 				<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>По ресторанам</v8:content>
+						<v8:content>По курьерам</v8:content>
 					</v8:item>
 				</dcsset:userSettingPresentation>
 			</dcsset:item>

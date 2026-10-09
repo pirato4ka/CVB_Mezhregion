@@ -260,15 +260,16 @@
 		<ChildObjects>
 			<Language>Русский</Language>
 			<Subsystem>Заказы</Subsystem>
-			<Subsystem>Ресторан</Subsystem>
+			<Subsystem>Рестораны</Subsystem>
 			<Subsystem>Меню</Subsystem>
-			<Subsystem>Курьер</Subsystem>
+			<Subsystem>Курьеры</Subsystem>
 			<Subsystem>Отчеты</Subsystem>
 			<Subsystem>Интегрирование</Subsystem>
 			<Role>Администратор</Role>
 			<Role>Менеджер</Role>
 			<Role>Диспетчер</Role>
-			<CommonCommand>РабочееМестоДиспетчера</CommonCommand>
+			<CommonModule>УправлениеДоставкой</CommonModule>
+			<CommonCommand>АРМДиспетчера</CommonCommand>
 			<CommonForm>Форма</CommonForm>
 			<Catalog>Рестораны</Catalog>
 			<Catalog>КатегорииБлюд</Catalog>
@@ -277,11 +278,13 @@
 			<Catalog>Курьеры</Catalog>
 			<Document>Заказ</Document>
 			<Enum>СтатусыЗаказов</Enum>
-			<Enum>СтатусыКурьера</Enum>
+			<Enum>СтатусыКурьеров</Enum>
 			<Enum>ТипыТранспорта</Enum>
 			<Report>ОтчетПоЗаказам</Report>
 			<Report>ОтчетПоРесторанам</Report>
-			<DataProcessor>РабочееМестоДиспетчера</DataProcessor>
+			<Report>ОтчетПоКурьерам</Report>
+			<Report>ПопулярностьБлюд</Report>
+			<DataProcessor>АРМДиспетчера</DataProcessor>
 			<InformationRegister>ЦеныБлюд</InformationRegister>
 			<InformationRegister>ЛогAPI</InformationRegister>
 		</ChildObjects>
