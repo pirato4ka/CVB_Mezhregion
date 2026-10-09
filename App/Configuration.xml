@@ -264,6 +264,34 @@
 		</Properties>
 		<ChildObjects>
 			<Language>Русский</Language>
+			<Subsystem>Заказы</Subsystem>
+			<Subsystem>Рестораны</Subsystem>
+			<Subsystem>Меню</Subsystem>
+			<Subsystem>Курьеры</Subsystem>
+			<Subsystem>Отчеты</Subsystem>
+			<CommonPicture>ИконкаЗаказы</CommonPicture>
+			<CommonPicture>ИконкаРестораны</CommonPicture>
+			<CommonPicture>ИконкаМеню</CommonPicture>
+			<CommonPicture>ИконкаКурьеры</CommonPicture>
+			<CommonPicture>ИконкаОтчеты</CommonPicture>
+			<Role>Администратор</Role>
+			<Role>Менеджер</Role>
+			<Role>Диспетчер</Role>
+			<Catalog>Рестораны</Catalog>
+			<Catalog>КатегорииБлюд</Catalog>
+			<Catalog>Блюда</Catalog>
+			<Catalog>Клиенты</Catalog>
+			<Catalog>Курьеры</Catalog>
+			<Document>Заказ</Document>
+			<Enum>ТипыТранспорта</Enum>
+			<Enum>СтатусыКурьеров</Enum>
+			<Enum>СтатусыЗаказов</Enum>
+			<Report>ОтчетПоЗаказам</Report>
+			<Report>ОтчетПоРесторанам</Report>
+			<Report>ОтчетПоКурьерам</Report>
+			<Report>ПопулярностьБлюд</Report>
+			<DataProcessor>АРМДиспетчера</DataProcessor>
+			<InformationRegister>ЦеныБлюд</InformationRegister>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>
