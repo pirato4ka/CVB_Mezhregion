@@ -6,20 +6,19 @@
 	</Events>
 	<ChildItems>
 		<UsualGroup name="ГруппаФильтры" id="56">
-			<Group>Horizontal</Group>
-			<Representation>None</Representation>
-			<ShowTitle>false</ShowTitle>
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Фильтры</v8:content>
 				</v8:item>
 			</Title>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаФильтрыРасширеннаяПодсказка" id="57"/>
 			<ChildItems>
 				<InputField name="ФильтрРесторан" id="43">
 					<DataPath>ФильтрРесторан</DataPath>
-					<Width>22</Width>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -32,15 +31,15 @@
 							<v8:content>Показать заказы только выбранного ресторана</v8:content>
 						</v8:item>
 					</ToolTip>
+					<Width>22</Width>
+					<ContextMenu name="ФильтрРесторанКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="ФильтрРесторанРасширеннаяПодсказка" id="45"/>
 					<Events>
 						<Event name="OnChange">ФильтрПриИзменении</Event>
 					</Events>
-					<ContextMenu name="ФильтрРесторанКонтекстноеМеню" id="44"/>
-					<ExtendedTooltip name="ФильтрРесторанРасширеннаяПодсказка" id="45"/>
 				</InputField>
 				<InputField name="ФильтрСтатус" id="46">
 					<DataPath>ФильтрСтатус</DataPath>
-					<Width>16</Width>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -53,15 +52,15 @@
 							<v8:content>Пусто — активные заказы (Новый, Готовится, Передан курьеру)</v8:content>
 						</v8:item>
 					</ToolTip>
+					<Width>16</Width>
+					<ContextMenu name="ФильтрСтатусКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="ФильтрСтатусРасширеннаяПодсказка" id="48"/>
 					<Events>
 						<Event name="OnChange">ФильтрПриИзменении</Event>
 					</Events>
-					<ContextMenu name="ФильтрСтатусКонтекстноеМеню" id="47"/>
-					<ExtendedTooltip name="ФильтрСтатусРасширеннаяПодсказка" id="48"/>
 				</InputField>
 				<InputField name="ФильтрКурьер" id="49">
 					<DataPath>ФильтрКурьер</DataPath>
-					<Width>20</Width>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -74,11 +73,12 @@
 							<v8:content>Показать заказы выбранного курьера</v8:content>
 						</v8:item>
 					</ToolTip>
+					<Width>20</Width>
+					<ContextMenu name="ФильтрКурьерКонтекстноеМеню" id="50"/>
+					<ExtendedTooltip name="ФильтрКурьерРасширеннаяПодсказка" id="51"/>
 					<Events>
 						<Event name="OnChange">ФильтрПриИзменении</Event>
 					</Events>
-					<ContextMenu name="ФильтрКурьерКонтекстноеМеню" id="50"/>
-					<ExtendedTooltip name="ФильтрКурьерРасширеннаяПодсказка" id="51"/>
 				</InputField>
 				<Button name="СброситьФильтры" id="52">
 					<Type>UsualButton</Type>
@@ -111,15 +111,15 @@
 			<ExtendedTooltip name="ГруппаЗоныРасширеннаяПодсказка" id="71"/>
 			<ChildItems>
 				<UsualGroup name="ЗонаЗаказы" id="66">
-					<Group>Vertical</Group>
-					<Representation>None</Representation>
-					<ShowTitle>true</ShowTitle>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>Зона 1. Активные заказы</v8:content>
 						</v8:item>
 					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>true</ShowTitle>
 					<ExtendedTooltip name="ЗонаЗаказыРасширеннаяПодсказка" id="67"/>
 					<ChildItems>
 						<Button name="НазначитьКурьера" id="58">
@@ -131,31 +131,58 @@
 									<v8:content>Назначить курьера на заказ</v8:content>
 								</v8:item>
 							</Title>
+							<ExtendedTooltip name="НазначитьКурьераРасширеннаяПодсказка" id="59"/>
 							<ToolTip>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
 									<v8:content>Выберите заказ слева и курьера справа, затем нажмите кнопку</v8:content>
 								</v8:item>
 							</ToolTip>
-							<ExtendedTooltip name="НазначитьКурьераРасширеннаяПодсказка" id="59"/>
 						</Button>
 						<Table name="ТаблицаЗаказов" id="60">
-							<DataPath>Заказы</DataPath>
 							<Representation>List</Representation>
 							<ReadOnly>true</ReadOnly>
 							<ChangeRowSet>false</ChangeRowSet>
 							<ChangeRowOrder>false</ChangeRowOrder>
+							<DataPath>Заказы</DataPath>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
 									<v8:content>Активные заказы</v8:content>
 								</v8:item>
 							</Title>
+							<ContextMenu name="ТаблицаЗаказовКонтекстноеМеню" id="61"/>
+							<AutoCommandBar name="ТаблицаЗаказовКоманднаяПанель" id="80">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ТаблицаЗаказовРасширеннаяПодсказка" id="62"/>
+							<SearchStringAddition name="ТаблицаЗаказовСтрокаПоиска" id="81">
+								<AdditionSource>
+									<Item>ТаблицаЗаказов</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаЗаказовСтрокаПоискаКонтекстноеМеню" id="82"/>
+								<ExtendedTooltip name="ТаблицаЗаказовСтрокаПоискаРасширеннаяПодсказка" id="83"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТаблицаЗаказовСостояниеПросмотра" id="84">
+								<AdditionSource>
+									<Item>ТаблицаЗаказов</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаЗаказовСостояниеПросмотраКонтекстноеМеню" id="85"/>
+								<ExtendedTooltip name="ТаблицаЗаказовСостояниеПросмотраРасширеннаяПодсказка" id="86"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТаблицаЗаказовУправлениеПоиском" id="87">
+								<AdditionSource>
+									<Item>ТаблицаЗаказов</Item>
+									<Type>SearchControlRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаЗаказовУправлениеПоискомКонтекстноеМеню" id="88"/>
+								<ExtendedTooltip name="ТаблицаЗаказовУправлениеПоискомРасширеннаяПодсказка" id="89"/>
+							</SearchControlAddition>
 							<Events>
 								<Event name="Selection">ЗаказыВыбор</Event>
 							</Events>
-							<ContextMenu name="ТаблицаЗаказовКонтекстноеМеню" id="61"/>
-							<ExtendedTooltip name="ТаблицаЗаказовРасширеннаяПодсказка" id="62"/>
 							<ChildItems>
 								<LabelField name="ЗаказыНомер" id="1">
 									<DataPath>Заказы.Номер</DataPath>
@@ -261,23 +288,23 @@
 					</ChildItems>
 				</UsualGroup>
 				<UsualGroup name="ЗонаКурьеры" id="68">
-					<Group>Vertical</Group>
-					<Representation>None</Representation>
-					<ShowTitle>true</ShowTitle>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>Зона 2. Курьеры</v8:content>
 						</v8:item>
 					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>true</ShowTitle>
 					<ExtendedTooltip name="ЗонаКурьерыРасширеннаяПодсказка" id="69"/>
 					<ChildItems>
 						<Table name="ТаблицаКурьеров" id="63">
-							<DataPath>Курьеры</DataPath>
 							<Representation>List</Representation>
 							<ReadOnly>true</ReadOnly>
 							<ChangeRowSet>false</ChangeRowSet>
 							<ChangeRowOrder>false</ChangeRowOrder>
+							<DataPath>Курьеры</DataPath>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -285,7 +312,34 @@
 								</v8:item>
 							</Title>
 							<ContextMenu name="ТаблицаКурьеровКонтекстноеМеню" id="64"/>
+							<AutoCommandBar name="ТаблицаКурьеровКоманднаяПанель" id="90">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
 							<ExtendedTooltip name="ТаблицаКурьеровРасширеннаяПодсказка" id="65"/>
+							<SearchStringAddition name="ТаблицаКурьеровСтрокаПоиска" id="91">
+								<AdditionSource>
+									<Item>ТаблицаКурьеров</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаКурьеровСтрокаПоискаКонтекстноеМеню" id="92"/>
+								<ExtendedTooltip name="ТаблицаКурьеровСтрокаПоискаРасширеннаяПодсказка" id="93"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТаблицаКурьеровСостояниеПросмотра" id="94">
+								<AdditionSource>
+									<Item>ТаблицаКурьеров</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаКурьеровСостояниеПросмотраКонтекстноеМеню" id="95"/>
+								<ExtendedTooltip name="ТаблицаКурьеровСостояниеПросмотраРасширеннаяПодсказка" id="96"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТаблицаКурьеровУправлениеПоиском" id="97">
+								<AdditionSource>
+									<Item>ТаблицаКурьеров</Item>
+									<Type>SearchControlRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаКурьеровУправлениеПоискомКонтекстноеМеню" id="98"/>
+								<ExtendedTooltip name="ТаблицаКурьеровУправлениеПоискомРасширеннаяПодсказка" id="99"/>
+							</SearchControlAddition>
 							<ChildItems>
 								<LabelField name="КурьерыНаименование" id="28">
 									<DataPath>Курьеры.Наименование</DataPath>

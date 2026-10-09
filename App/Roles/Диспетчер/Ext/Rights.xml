@@ -111,63 +111,63 @@
 	<object>
 		<name>Document.Заказ.Attribute.Клиент</name>
 		<right>
-			<name>Update</name>
+			<name>Edit</name>
 			<value>false</value>
 		</right>
 	</object>
 	<object>
 		<name>Document.Заказ.Attribute.Ресторан</name>
 		<right>
-			<name>Update</name>
+			<name>Edit</name>
 			<value>false</value>
 		</right>
 	</object>
 	<object>
 		<name>Document.Заказ.Attribute.АдресДоставки</name>
 		<right>
-			<name>Update</name>
+			<name>Edit</name>
 			<value>false</value>
 		</right>
 	</object>
 	<object>
 		<name>Document.Заказ.Attribute.ДатаСоздания</name>
 		<right>
-			<name>Update</name>
+			<name>Edit</name>
 			<value>false</value>
 		</right>
 	</object>
 	<object>
 		<name>Document.Заказ.Attribute.ПлановоеВремяДоставки</name>
 		<right>
-			<name>Update</name>
+			<name>Edit</name>
 			<value>false</value>
 		</right>
 	</object>
 	<object>
 		<name>Document.Заказ.Attribute.ФактическоеВремяДоставки</name>
 		<right>
-			<name>Update</name>
+			<name>Edit</name>
 			<value>false</value>
 		</right>
 	</object>
 	<object>
 		<name>Document.Заказ.Attribute.ВремяДоставкиМинут</name>
 		<right>
-			<name>Update</name>
+			<name>Edit</name>
 			<value>false</value>
 		</right>
 	</object>
 	<object>
 		<name>Document.Заказ.Attribute.СуммаДокумента</name>
 		<right>
-			<name>Update</name>
+			<name>Edit</name>
 			<value>false</value>
 		</right>
 	</object>
 	<object>
 		<name>Document.Заказ.TabularSection.Состав</name>
 		<right>
-			<name>Update</name>
+			<name>Edit</name>
 			<value>false</value>
 		</right>
 	</object>

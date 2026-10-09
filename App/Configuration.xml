@@ -277,21 +277,21 @@
 			<Role>Администратор</Role>
 			<Role>Менеджер</Role>
 			<Role>Диспетчер</Role>
-			<Enum>ТипыТранспорта</Enum>
-			<Enum>СтатусыКурьеров</Enum>
-			<Enum>СтатусыЗаказов</Enum>
 			<Catalog>Рестораны</Catalog>
 			<Catalog>КатегорииБлюд</Catalog>
 			<Catalog>Блюда</Catalog>
 			<Catalog>Клиенты</Catalog>
 			<Catalog>Курьеры</Catalog>
-			<InformationRegister>ЦеныБлюд</InformationRegister>
 			<Document>Заказ</Document>
-			<DataProcessor>АРМДиспетчера</DataProcessor>
+			<Enum>ТипыТранспорта</Enum>
+			<Enum>СтатусыКурьеров</Enum>
+			<Enum>СтатусыЗаказов</Enum>
 			<Report>ОтчетПоЗаказам</Report>
 			<Report>ОтчетПоРесторанам</Report>
 			<Report>ОтчетПоКурьерам</Report>
 			<Report>ПопулярностьБлюд</Report>
+			<DataProcessor>АРМДиспетчера</DataProcessor>
+			<InformationRegister>ЦеныБлюд</InformationRegister>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>

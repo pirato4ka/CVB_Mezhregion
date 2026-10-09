@@ -19,9 +19,9 @@
 					<ChildItems>
 						<PictureField name="КартинкаБлюда" id="1">
 							<DataPath>АдресФотографии</DataPath>
-							<PictureSize>Proportionally</PictureSize>
 							<Width>30</Width>
 							<Height>15</Height>
+							<PictureSize>Proportionally</PictureSize>
 							<ContextMenu name="КартинкаБлюдаКонтекстноеМеню" id="2"/>
 							<ExtendedTooltip name="КартинкаБлюдаРасширеннаяПодсказка" id="3"/>
 						</PictureField>
@@ -40,13 +40,13 @@
 											<v8:content>Выбрать фото</v8:content>
 										</v8:item>
 									</Title>
+									<ExtendedTooltip name="ВыбратьФотоРасширеннаяПодсказка" id="5"/>
 									<ToolTip>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
 											<v8:content>Загрузить изображение JPG или PNG</v8:content>
 										</v8:item>
 									</ToolTip>
-									<ExtendedTooltip name="ВыбратьФотоРасширеннаяПодсказка" id="5"/>
 								</Button>
 								<Button name="УдалитьФото" id="6">
 									<Type>UsualButton</Type>
@@ -57,13 +57,13 @@
 											<v8:content>Удалить фото</v8:content>
 										</v8:item>
 									</Title>
+									<ExtendedTooltip name="УдалитьФотоРасширеннаяПодсказка" id="7"/>
 									<ToolTip>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
 											<v8:content>Убрать фотографию из карточки блюда</v8:content>
 										</v8:item>
 									</ToolTip>
-									<ExtendedTooltip name="УдалитьФотоРасширеннаяПодсказка" id="7"/>
 								</Button>
 							</ChildItems>
 						</UsualGroup>
@@ -147,13 +147,13 @@
 									<v8:content>Установить цену</v8:content>
 								</v8:item>
 							</Title>
+							<ExtendedTooltip name="УстановитьЦенуРасширеннаяПодсказка" id="25"/>
 							<ToolTip>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
 									<v8:content>Открыть регистр ЦеныБлюд для этого блюда (записать блюдо перед установкой цены)</v8:content>
 								</v8:item>
 							</ToolTip>
-							<ExtendedTooltip name="УстановитьЦенуРасширеннаяПодсказка" id="25"/>
 						</Button>
 					</ChildItems>
 				</UsualGroup>
