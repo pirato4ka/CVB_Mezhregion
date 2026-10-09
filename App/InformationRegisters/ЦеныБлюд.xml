@@ -105,7 +105,6 @@
 					<Indexing>DontIndex</Indexing>
 					<FullTextSearch>Use</FullTextSearch>
 					<DataHistory>Use</DataHistory>
-					<UseInTotals>true</UseInTotals>
 				</Properties>
 			</Resource>
 			<Dimension uuid="a718db1a-b74b-504d-af5d-6df2f2792248">
@@ -145,7 +144,6 @@
 					<Master>true</Master>
 					<MainFilter>true</MainFilter>
 					<DenyIncompleteValues>true</DenyIncompleteValues>
-					<UseInTotals>true</UseInTotals>
 				</Properties>
 			</Dimension>
 			<Form>ФормаЗаписи</Form>

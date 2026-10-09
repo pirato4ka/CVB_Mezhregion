@@ -24,6 +24,5 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Enum.СтатусыКурьеров</xr:Item>
 			</Content>
 		</Properties>
-		<ChildObjects/>
 	</Subsystem>
 </MetaDataObject>

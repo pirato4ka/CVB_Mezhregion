@@ -532,8 +532,6 @@
 							<Mask/>
 							<MultiLine>false</MultiLine>
 							<ExtendedEdit>false</ExtendedEdit>
-							<FillFromFillingValue>false</FillFromFillingValue>
-							<FillValue xsi:nil="true"/>
 							<FillChecking>ShowError</FillChecking>
 							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
 							<ChoiceParameterLinks/>
@@ -573,8 +571,6 @@
 							<Mask/>
 							<MultiLine>false</MultiLine>
 							<ExtendedEdit>false</ExtendedEdit>
-							<FillFromFillingValue>false</FillFromFillingValue>
-							<FillValue xsi:nil="true"/>
 							<FillChecking>ShowError</FillChecking>
 							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
 							<ChoiceParameterLinks/>
@@ -614,8 +610,6 @@
 							<Mask/>
 							<MultiLine>false</MultiLine>
 							<ExtendedEdit>false</ExtendedEdit>
-							<FillFromFillingValue>false</FillFromFillingValue>
-							<FillValue xsi:nil="true"/>
 							<FillChecking>ShowError</FillChecking>
 							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
 							<ChoiceParameterLinks/>
@@ -655,8 +649,6 @@
 							<Mask/>
 							<MultiLine>false</MultiLine>
 							<ExtendedEdit>false</ExtendedEdit>
-							<FillFromFillingValue>false</FillFromFillingValue>
-							<FillValue xsi:nil="true"/>
 							<FillChecking>ShowError</FillChecking>
 							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
 							<ChoiceParameterLinks/>

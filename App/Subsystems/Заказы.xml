@@ -25,6 +25,5 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Enum.СтатусыЗаказов</xr:Item>
 			</Content>
 		</Properties>
-		<ChildObjects/>
 	</Subsystem>
 </MetaDataObject>
