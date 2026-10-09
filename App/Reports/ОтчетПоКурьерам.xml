@@ -1,32 +1,41 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
-	<DataProcessor uuid="aa454ebd-391e-48f6-992d-3c17e17071a0">
+	<Report uuid="405cfa36-59bb-4647-a4fe-88c075d873b9">
 		<InternalInfo>
-			<xr:GeneratedType name="DataProcessorObject.РабочееМестоДиспетчера" category="Object">
-				<xr:TypeId>cb79f057-e82d-4f8e-a8f1-6a02f41eeba9</xr:TypeId>
-				<xr:ValueId>51a21b7b-30e4-4213-9d00-989e1bb0e149</xr:ValueId>
+			<xr:GeneratedType name="ReportObject.ОтчетПоКурьерам" category="Object">
+				<xr:TypeId>29c39014-2a08-4587-bc6a-edbfd492ece9</xr:TypeId>
+				<xr:ValueId>12f515b1-8392-4403-956f-7a0708ff79f0</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="DataProcessorManager.РабочееМестоДиспетчера" category="Manager">
-				<xr:TypeId>7d3598cf-8d13-4923-8c2d-d9479d3f5776</xr:TypeId>
-				<xr:ValueId>10a35dfc-b406-474f-8d85-f4aa1a894c09</xr:ValueId>
+			<xr:GeneratedType name="ReportManager.ОтчетПоКурьерам" category="Manager">
+				<xr:TypeId>5d5bddfc-ae08-43e3-8c39-17a9adb48d73</xr:TypeId>
+				<xr:ValueId>d4fd1cf1-3245-4452-a0c0-942299cef66a</xr:ValueId>
 			</xr:GeneratedType>
 		</InternalInfo>
 		<Properties>
-			<Name>РабочееМестоДиспетчера</Name>
+			<Name>ОтчетПоКурьерам</Name>
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Рабочее место диспетчера</v8:content>
+					<v8:content>Отчет по курьерам</v8:content>
 				</v8:item>
 			</Synonym>
-			<Comment/>
+			<Comment>Выполненные доставки и среднее время доставки по курьерам за период</Comment>
 			<UseStandardCommands>true</UseStandardCommands>
 			<DefaultForm/>
 			<AuxiliaryForm/>
+			<MainDataCompositionSchema>Report.ОтчетПоКурьерам.Template.ОсновнаяСхемаКомпоновкиДанных</MainDataCompositionSchema>
+			<DefaultSettingsForm/>
+			<AuxiliarySettingsForm/>
+			<DefaultVariantForm/>
+			<AuxiliaryVariantForm/>
+			<VariantsStorage/>
+			<SettingsStorage/>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<ExtendedPresentation/>
 			<Explanation/>
 		</Properties>
-		<ChildObjects/>
-	</DataProcessor>
+		<ChildObjects>
+			<Template>ОсновнаяСхемаКомпоновкиДанных</Template>
+		</ChildObjects>
+	</Report>
 </MetaDataObject>

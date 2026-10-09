@@ -11,7 +11,7 @@
 		</right>
 	</object>
 	<object>
-		<name>Subsystem.Ресторан.Subsystem.Справочники</name>
+		<name>Subsystem.Рестораны</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -253,14 +253,14 @@
 		</right>
 	</object>
 	<object>
-		<name>CommonCommand.РабочееМестоДиспетчера</name>
+		<name>CommonCommand.АРМДиспетчера</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
 		</right>
 	</object>
 	<object>
-		<name>Subsystem.Ресторан</name>
+		<name>Subsystem.Рестораны</name>
 		<right>
 			<name>View</name>
 			<value>true</value>
@@ -646,7 +646,7 @@
 		</right>
 	</object>
 	<object>
-		<name>DataProcessor.РабочееМестоДиспетчера</name>
+		<name>DataProcessor.АРМДиспетчера</name>
 		<right>
 			<name>Use</name>
 			<value>true</value>
@@ -657,7 +657,7 @@
 		</right>
 	</object>
 	<object>
-		<name>Subsystem.Курьер</name>
+		<name>Subsystem.Курьеры</name>
 		<right>
 			<name>View</name>
 			<value>true</value>

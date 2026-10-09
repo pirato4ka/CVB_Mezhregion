@@ -77,19 +77,6 @@
 					<Color>auto</Color>
 				</Properties>
 			</EnumValue>
-			<EnumValue uuid="c3695203-bca5-4ef1-80f0-b41157036d83">
-				<Properties>
-					<Name>ВРаботе</Name>
-					<Synonym>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>В работе</v8:content>
-						</v8:item>
-					</Synonym>
-					<Comment/>
-					<Color>auto</Color>
-				</Properties>
-			</EnumValue>
 			<EnumValue uuid="b9e7d2ac-52fe-4042-b8c5-fc419a22f923">
 				<Properties>
 					<Name>Доставлен</Name>
