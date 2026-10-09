@@ -1,314 +1,193 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<Events>
-		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
 	</Events>
 	<ChildItems>
-		<UsualGroup name="ГруппаШапка" id="26">
-			<Group>Horizontal</Group>
-			<Representation>None</Representation>
-			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="27"/>
-			<ChildItems>
-				<UsualGroup name="ГруппаШапкаЛево" id="10">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Клиент и ресторан</v8:content>
-						</v8:item>
-					</Title>
-					<Group>Vertical</Group>
-					<Representation>None</Representation>
-					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="ГруппаШапкаЛевоРасширеннаяПодсказка" id="11"/>
-					<ChildItems>
-						<InputField name="Клиент" id="1">
-							<DataPath>Объект.Клиент</DataPath>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Клиент, оформивший заказ</v8:content>
-								</v8:item>
-							</ToolTip>
-							<ContextMenu name="КлиентКонтекстноеМеню" id="2"/>
-							<ExtendedTooltip name="КлиентРасширеннаяПодсказка" id="3"/>
-							<Events>
-								<Event name="OnChange">КлиентПриИзменении</Event>
-							</Events>
-						</InputField>
-						<InputField name="Ресторан" id="4">
-							<DataPath>Объект.Ресторан</DataPath>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>При смене ресторана состав заказа можно очистить; блюда выбираются только из меню этого ресторана</v8:content>
-								</v8:item>
-							</ToolTip>
-							<ContextMenu name="РесторанКонтекстноеМеню" id="5"/>
-							<ExtendedTooltip name="РесторанРасширеннаяПодсказка" id="6"/>
-							<Events>
-								<Event name="OnChange">РесторанПриИзменении</Event>
-							</Events>
-						</InputField>
-						<InputField name="АдресДоставки" id="7">
-							<DataPath>Объект.АдресДоставки</DataPath>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Адрес подставляется из карточки клиента</v8:content>
-								</v8:item>
-							</ToolTip>
-							<ContextMenu name="АдресДоставкиКонтекстноеМеню" id="8"/>
-							<ExtendedTooltip name="АдресДоставкиРасширеннаяПодсказка" id="9"/>
-						</InputField>
-					</ChildItems>
-				</UsualGroup>
-				<UsualGroup name="ГруппаШапкаПраво" id="24">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Статус и курьер</v8:content>
-						</v8:item>
-					</Title>
-					<Group>Vertical</Group>
-					<Representation>None</Representation>
-					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="ГруппаШапкаПравоРасширеннаяПодсказка" id="25"/>
-					<ChildItems>
-						<InputField name="Статус" id="12">
-							<DataPath>Объект.Статус</DataPath>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Статус заказа: Новый, Готовится, Передан курьеру, Доставлен, Отменен</v8:content>
-								</v8:item>
-							</ToolTip>
-							<ContextMenu name="СтатусКонтекстноеМеню" id="13"/>
-							<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="14"/>
-						</InputField>
-						<InputField name="Курьер" id="15">
-							<DataPath>Объект.Курьер</DataPath>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Назначить курьера можно и из рабочего места диспетчера</v8:content>
-								</v8:item>
-							</ToolTip>
-							<ContextMenu name="КурьерКонтекстноеМеню" id="16"/>
-							<ExtendedTooltip name="КурьерРасширеннаяПодсказка" id="17"/>
-						</InputField>
-						<InputField name="ДатаСоздания" id="18">
-							<DataPath>Объект.ДатаСоздания</DataPath>
-							<ReadOnly>true</ReadOnly>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Заполняется автоматически</v8:content>
-								</v8:item>
-							</ToolTip>
-							<ContextMenu name="ДатаСозданияКонтекстноеМеню" id="19"/>
-							<ExtendedTooltip name="ДатаСозданияРасширеннаяПодсказка" id="20"/>
-						</InputField>
-						<InputField name="Дата" id="21">
-							<DataPath>Объект.Дата</DataPath>
-							<ReadOnly>true</ReadOnly>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Дата документа</v8:content>
-								</v8:item>
-							</Title>
-							<ContextMenu name="ДатаКонтекстноеМеню" id="22"/>
-							<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="23"/>
-						</InputField>
-					</ChildItems>
-				</UsualGroup>
-			</ChildItems>
-		</UsualGroup>
-		<UsualGroup name="ГруппаВремя" id="37">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Время доставки</v8:content>
-				</v8:item>
-			</Title>
-			<Group>Horizontal</Group>
-			<Representation>None</Representation>
-			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="ГруппаВремяРасширеннаяПодсказка" id="38"/>
-			<ChildItems>
-				<InputField name="ПлановоеВремяДоставки" id="28">
-					<DataPath>Объект.ПлановоеВремяДоставки</DataPath>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Согласованное время доставки клиенту</v8:content>
-						</v8:item>
-					</ToolTip>
-					<ContextMenu name="ПлановоеВремяДоставкиКонтекстноеМеню" id="29"/>
-					<ExtendedTooltip name="ПлановоеВремяДоставкиРасширеннаяПодсказка" id="30"/>
-				</InputField>
-				<InputField name="ФактическоеВремяДоставки" id="31">
-					<DataPath>Объект.ФактическоеВремяДоставки</DataPath>
-					<ReadOnly>true</ReadOnly>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Заполняется при переводе заказа в статус Доставлен</v8:content>
-						</v8:item>
-					</ToolTip>
-					<ContextMenu name="ФактическоеВремяДоставкиКонтекстноеМеню" id="32"/>
-					<ExtendedTooltip name="ФактическоеВремяДоставкиРасширеннаяПодсказка" id="33"/>
-				</InputField>
-				<InputField name="ВремяДоставкиМинут" id="34">
-					<DataPath>Объект.ВремяДоставкиМинут</DataPath>
-					<ReadOnly>true</ReadOnly>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Разница между созданием и доставкой, мин</v8:content>
-						</v8:item>
-					</ToolTip>
-					<ContextMenu name="ВремяДоставкиМинутКонтекстноеМеню" id="35"/>
-					<ExtendedTooltip name="ВремяДоставкиМинутРасширеннаяПодсказка" id="36"/>
-				</InputField>
-			</ChildItems>
-		</UsualGroup>
-		<Table name="Состав" id="51">
+		<InputField name="Номер" id="1">
+			<DataPath>Объект.Number</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Дата" id="5">
+			<DataPath>Объект.Date</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="7"/>
+		</InputField>
+		<InputField name="Клиент" id="9">
+			<DataPath>Объект.Клиент</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="КлиентКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="КлиентРасширеннаяПодсказка" id="11"/>
+			<Events>
+				<Event name="OnChange">КлиентПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="Ресторан" id="13">
+			<DataPath>Объект.Ресторан</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="РесторанКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="РесторанРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<InputField name="АдреДоставки" id="17">
+			<DataPath>Объект.АдресДоставки</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="АдреДоставкиКонтекстноеМеню" id="18"/>
+			<ExtendedTooltip name="АдреДоставкиРасширеннаяПодсказка" id="19"/>
+		</InputField>
+		<InputField name="ДатаВремяСозданияЗаказа" id="21">
+			<DataPath>Объект.ДатаВремяСозданияЗаказа</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ДатаВремяСозданияЗаказаКонтекстноеМеню" id="22"/>
+			<ExtendedTooltip name="ДатаВремяСозданияЗаказаРасширеннаяПодсказка" id="23"/>
+		</InputField>
+		<InputField name="ПлановоеВремяДоставки" id="25">
+			<DataPath>Объект.ПлановоеВремяДоставки</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ПлановоеВремяДоставкиКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="ПлановоеВремяДоставкиРасширеннаяПодсказка" id="27"/>
+		</InputField>
+		<InputField name="Курьер" id="33">
+			<DataPath>Объект.Курьер</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="КурьерКонтекстноеМеню" id="34"/>
+			<ExtendedTooltip name="КурьерРасширеннаяПодсказка" id="35"/>
+		</InputField>
+		<InputField name="СтатусЗаказа" id="37">
+			<DataPath>Объект.СтатусЗаказа</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="СтатусЗаказаКонтекстноеМеню" id="38"/>
+			<ExtendedTooltip name="СтатусЗаказаРасширеннаяПодсказка" id="39"/>
+		</InputField>
+		<InputField name="ИтоговаяСумма" id="41">
+			<DataPath>Объект.ИтоговаяСумма</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ИтоговаяСуммаКонтекстноеМеню" id="42"/>
+			<ExtendedTooltip name="ИтоговаяСуммаРасширеннаяПодсказка" id="43"/>
+		</InputField>
+		<Table name="БлюдаЗаказа" id="49">
 			<Representation>List</Representation>
-			<ChangeRowSet>true</ChangeRowSet>
-			<ChangeRowOrder>false</ChangeRowOrder>
-			<DataPath>Объект.Состав</DataPath>
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Состав заказа</v8:content>
-				</v8:item>
-			</Title>
-			<ContextMenu name="СоставКонтекстноеМеню" id="52"/>
-			<AutoCommandBar name="СоставКоманднаяПанель" id="61">
-				<Autofill>false</Autofill>
-			</AutoCommandBar>
-			<ExtendedTooltip name="СоставРасширеннаяПодсказка" id="53"/>
-			<SearchStringAddition name="СоставСтрокаПоиска" id="62">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.БлюдаЗаказа</DataPath>
+			<ShowCommandBar>auto</ShowCommandBar>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="БлюдаЗаказаКонтекстноеМеню" id="50"/>
+			<AutoCommandBar name="БлюдаЗаказаКоманднаяПанель" id="51"/>
+			<ExtendedTooltip name="БлюдаЗаказаРасширеннаяПодсказка" id="52"/>
+			<SearchStringAddition name="БлюдаЗаказаСтрокаПоиска" id="53">
 				<AdditionSource>
-					<Item>Состав</Item>
+					<Item>БлюдаЗаказа</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СоставСтрокаПоискаКонтекстноеМеню" id="63"/>
-				<ExtendedTooltip name="СоставСтрокаПоискаРасширеннаяПодсказка" id="64"/>
+				<ContextMenu name="БлюдаЗаказаСтрокаПоискаКонтекстноеМеню" id="54"/>
+				<ExtendedTooltip name="БлюдаЗаказаСтрокаПоискаРасширеннаяПодсказка" id="55"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="СоставСостояниеПросмотра" id="65">
+			<ViewStatusAddition name="БлюдаЗаказаСостояниеПросмотра" id="56">
 				<AdditionSource>
-					<Item>Состав</Item>
+					<Item>БлюдаЗаказа</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СоставСостояниеПросмотраКонтекстноеМеню" id="66"/>
-				<ExtendedTooltip name="СоставСостояниеПросмотраРасширеннаяПодсказка" id="67"/>
+				<ContextMenu name="БлюдаЗаказаСостояниеПросмотраКонтекстноеМеню" id="57"/>
+				<ExtendedTooltip name="БлюдаЗаказаСостояниеПросмотраРасширеннаяПодсказка" id="58"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="СоставУправлениеПоиском" id="68">
+			<SearchControlAddition name="БлюдаЗаказаУправлениеПоиском" id="59">
 				<AdditionSource>
-					<Item>Состав</Item>
-					<Type>SearchControlRepresentation</Type>
+					<Item>БлюдаЗаказа</Item>
+					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="СоставУправлениеПоискомКонтекстноеМеню" id="69"/>
-				<ExtendedTooltip name="СоставУправлениеПоискомРасширеннаяПодсказка" id="70"/>
+				<ContextMenu name="БлюдаЗаказаУправлениеПоискомКонтекстноеМеню" id="60"/>
+				<ExtendedTooltip name="БлюдаЗаказаУправлениеПоискомРасширеннаяПодсказка" id="61"/>
 			</SearchControlAddition>
-			<Events>
-				<Event name="AfterDeleteRow">СоставПослеУдаленияСтроки</Event>
-			</Events>
 			<ChildItems>
-				<InputField name="СоставБлюдо" id="39">
-					<DataPath>Объект.Состав.Блюдо</DataPath>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Выбирается только блюдо выбранного ресторана; цена подставится из регистра ЦеныБлюд</v8:content>
-						</v8:item>
-					</ToolTip>
-					<ChoiceParameterLinks>
-						<xr:Link>
-							<xr:Name>Отбор.Ресторан</xr:Name>
-							<xr:DataPath>Объект.Ресторан</xr:DataPath>
-							<xr:ValueChange>DontChange</xr:ValueChange>
-						</xr:Link>
-					</ChoiceParameterLinks>
-					<ContextMenu name="СоставБлюдоКонтекстноеМеню" id="40"/>
-					<ExtendedTooltip name="СоставБлюдоРасширеннаяПодсказка" id="41"/>
+				<LabelField name="БлюдаЗаказаНомерСтроки" id="70">
+					<DataPath>Объект.БлюдаЗаказа.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БлюдаЗаказаНомерСтрокиКонтекстноеМеню" id="71"/>
+					<ExtendedTooltip name="БлюдаЗаказаНомерСтрокиРасширеннаяПодсказка" id="72"/>
+				</LabelField>
+				<InputField name="БлюдаЗаказаБлюдо" id="74">
+					<DataPath>Объект.БлюдаЗаказа.Блюдо</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="БлюдаЗаказаБлюдоКонтекстноеМеню" id="75"/>
+					<ExtendedTooltip name="БлюдаЗаказаБлюдоРасширеннаяПодсказка" id="76"/>
 					<Events>
-						<Event name="OnChange">СоставБлюдоПриИзменении</Event>
+						<Event name="OnChange">БлюдаЗаказаБлюдоПриИзменении</Event>
 					</Events>
 				</InputField>
-				<InputField name="СоставКоличество" id="42">
-					<DataPath>Объект.Состав.Количество</DataPath>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Пустое количество заменяется на 1</v8:content>
-						</v8:item>
-					</ToolTip>
-					<ContextMenu name="СоставКоличествоКонтекстноеМеню" id="43"/>
-					<ExtendedTooltip name="СоставКоличествоРасширеннаяПодсказка" id="44"/>
+				<InputField name="БлюдаЗаказаКоличество" id="78">
+					<DataPath>Объект.БлюдаЗаказа.Количество</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="БлюдаЗаказаКоличествоКонтекстноеМеню" id="79"/>
+					<ExtendedTooltip name="БлюдаЗаказаКоличествоРасширеннаяПодсказка" id="80"/>
 					<Events>
-						<Event name="OnChange">СоставСтрокаПриИзменении</Event>
+						<Event name="OnChange">БлюдаЗаказаКоличествоПриИзменении</Event>
 					</Events>
 				</InputField>
-				<InputField name="СоставЦена" id="45">
-					<DataPath>Объект.Состав.Цена</DataPath>
-					<ContextMenu name="СоставЦенаКонтекстноеМеню" id="46"/>
-					<ExtendedTooltip name="СоставЦенаРасширеннаяПодсказка" id="47"/>
+				<InputField name="БлюдаЗаказаЦена" id="82">
+					<DataPath>Объект.БлюдаЗаказа.Цена</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="БлюдаЗаказаЦенаКонтекстноеМеню" id="83"/>
+					<ExtendedTooltip name="БлюдаЗаказаЦенаРасширеннаяПодсказка" id="84"/>
 					<Events>
-						<Event name="OnChange">СоставСтрокаПриИзменении</Event>
+						<Event name="OnChange">БлюдаЗаказаЦенаПриИзменении</Event>
 					</Events>
 				</InputField>
-				<InputField name="СоставСумма" id="48">
-					<DataPath>Объект.Состав.Сумма</DataPath>
-					<ReadOnly>true</ReadOnly>
-					<ContextMenu name="СоставСуммаКонтекстноеМеню" id="49"/>
-					<ExtendedTooltip name="СоставСуммаРасширеннаяПодсказка" id="50"/>
+				<InputField name="БлюдаЗаказаСумма" id="86">
+					<DataPath>Объект.БлюдаЗаказа.Сумма</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="БлюдаЗаказаСуммаКонтекстноеМеню" id="87"/>
+					<ExtendedTooltip name="БлюдаЗаказаСуммаРасширеннаяПодсказка" id="88"/>
 				</InputField>
 			</ChildItems>
 		</Table>
-		<UsualGroup name="ГруппаИтого" id="57">
-			<Group>Horizontal</Group>
-			<Representation>None</Representation>
-			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="ГруппаИтогоРасширеннаяПодсказка" id="58"/>
-			<ChildItems>
-				<InputField name="СуммаДокумента" id="54">
-					<DataPath>Объект.СуммаДокумента</DataPath>
-					<ReadOnly>true</ReadOnly>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Итого, руб.</v8:content>
-						</v8:item>
-					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Сумма всех строк состава, пересчитывается автоматически</v8:content>
-						</v8:item>
-					</ToolTip>
-					<ContextMenu name="СуммаДокументаКонтекстноеМеню" id="55"/>
-					<ExtendedTooltip name="СуммаДокументаРасширеннаяПодсказка" id="56"/>
-				</InputField>
-			</ChildItems>
-		</UsualGroup>
+		<InputField name="ФактическоеВремяДоставки" id="29">
+			<DataPath>Объект.ФактическоеВремяДоставки</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ФактическоеВремяДоставкиКонтекстноеМеню" id="30"/>
+			<ExtendedTooltip name="ФактическоеВремяДоставкиРасширеннаяПодсказка" id="31"/>
+		</InputField>
+		<InputField name="ВремяДоставкиМинуты" id="45">
+			<DataPath>Объект.ВремяДоставкиМинуты</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ВремяДоставкиМинутыКонтекстноеМеню" id="46"/>
+			<ExtendedTooltip name="ВремяДоставкиМинутыРасширеннаяПодсказка" id="47"/>
+		</InputField>
 	</ChildItems>
 	<Attributes>
-		<Attribute name="Объект" id="59">
+		<Attribute name="Объект" id="1">
 			<Type>
 				<v8:Type>cfg:DocumentObject.Заказ</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<SavedData>true</SavedData>
-		</Attribute>
-		<Attribute name="ПредыдущийРесторан" id="60">
-			<Type>
-				<v8:Type>cfg:CatalogRef.Рестораны</v8:Type>
-			</Type>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
 		</Attribute>
 	</Attributes>
 </Form>

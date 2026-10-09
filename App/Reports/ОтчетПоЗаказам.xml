@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
-	<Report uuid="215b3872-16b8-50ea-a70f-1aadcbe0a012">
+	<Report uuid="2f94036a-e2df-4ada-ae26-cbf293acc8f1">
 		<InternalInfo>
 			<xr:GeneratedType name="ReportObject.ОтчетПоЗаказам" category="Object">
-				<xr:TypeId>559b6d97-dd62-5479-adfa-402f3280b9ff</xr:TypeId>
-				<xr:ValueId>00ddb0de-e4e6-5bdd-910f-95ee44ff6131</xr:ValueId>
+				<xr:TypeId>f6c42cf2-4ae1-49e8-8103-30682f9795ff</xr:TypeId>
+				<xr:ValueId>3cf9b0fa-8c0f-4091-a0dd-979cfcffc863</xr:ValueId>
 			</xr:GeneratedType>
 			<xr:GeneratedType name="ReportManager.ОтчетПоЗаказам" category="Manager">
-				<xr:TypeId>1ea32c0b-74fd-50a9-950f-c195b4b78ca0</xr:TypeId>
-				<xr:ValueId>cdf605ff-9348-5308-86cf-4703bcafbf25</xr:ValueId>
+				<xr:TypeId>84b3a125-f033-443f-80de-80aa50315ed6</xr:TypeId>
+				<xr:ValueId>822e30ff-8f1c-49c4-aea0-3efc3215d7b9</xr:ValueId>
 			</xr:GeneratedType>
 		</InternalInfo>
 		<Properties>
@@ -20,6 +20,7 @@
 				</v8:item>
 			</Synonym>
 			<Comment/>
+			<UseStandardCommands>true</UseStandardCommands>
 			<DefaultForm/>
 			<AuxiliaryForm/>
 			<MainDataCompositionSchema>Report.ОтчетПоЗаказам.Template.ОсновнаяСхемаКомпоновкиДанных</MainDataCompositionSchema>

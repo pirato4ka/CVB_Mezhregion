@@ -1,18 +1,18 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
-	<Enum uuid="bf6a797a-868a-51a1-adee-dd8887485941">
+	<Enum uuid="605d3e69-5130-418a-a0e8-afbc231f682f">
 		<InternalInfo>
 			<xr:GeneratedType name="EnumRef.СтатусыЗаказов" category="Ref">
-				<xr:TypeId>58c7a1a0-c1b2-56ae-8a09-19e1d86b1175</xr:TypeId>
-				<xr:ValueId>4e753cbf-7aec-500d-a329-a7e328463fb1</xr:ValueId>
+				<xr:TypeId>00c84d29-9566-4dab-a7cb-618930637067</xr:TypeId>
+				<xr:ValueId>f6265713-8a00-4059-8988-eded9a2e8884</xr:ValueId>
 			</xr:GeneratedType>
 			<xr:GeneratedType name="EnumManager.СтатусыЗаказов" category="Manager">
-				<xr:TypeId>a733f684-c9bc-5e1b-8447-9f60a1941e0b</xr:TypeId>
-				<xr:ValueId>38dbf83a-5074-5dad-9759-d403ba6c32ed</xr:ValueId>
+				<xr:TypeId>cd9d1c68-32bf-4b08-a33b-65e95e261377</xr:TypeId>
+				<xr:ValueId>39290d63-d888-4c12-942f-5d39645cdc25</xr:ValueId>
 			</xr:GeneratedType>
 			<xr:GeneratedType name="EnumList.СтатусыЗаказов" category="List">
-				<xr:TypeId>39b5f430-ac79-5e3d-abc2-c6db7285f276</xr:TypeId>
-				<xr:ValueId>b2ffb852-9e4e-5a2f-88d8-0d22a9f619af</xr:ValueId>
+				<xr:TypeId>7107d82d-b998-443c-8b19-e826d5273304</xr:TypeId>
+				<xr:ValueId>ffe038ee-4d0c-493a-8732-b26e34433908</xr:ValueId>
 			</xr:GeneratedType>
 		</InternalInfo>
 		<Properties>
@@ -24,12 +24,21 @@
 				</v8:item>
 			</Synonym>
 			<Comment/>
-			<UseStandardCommands>true</UseStandardCommands>
+			<UseStandardCommands>false</UseStandardCommands>
+			<Characteristics/>
 			<QuickChoice>true</QuickChoice>
 			<ChoiceMode>BothWays</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 		</Properties>
 		<ChildObjects>
-			<EnumValue uuid="49efe190-efda-5ec0-b266-f6eafcb29a81">
+			<EnumValue uuid="fc14a586-69bb-4cd9-9810-60a897c5cea6">
 				<Properties>
 					<Name>Новый</Name>
 					<Synonym>
@@ -39,9 +48,10 @@
 						</v8:item>
 					</Synonym>
 					<Comment/>
+					<Color>auto</Color>
 				</Properties>
 			</EnumValue>
-			<EnumValue uuid="a199130e-17b1-58fe-916d-0ad0eeb2e81a">
+			<EnumValue uuid="9f19e29b-9ca2-44ed-9199-a2b74509a693">
 				<Properties>
 					<Name>Готовится</Name>
 					<Synonym>
@@ -51,9 +61,10 @@
 						</v8:item>
 					</Synonym>
 					<Comment/>
+					<Color>auto</Color>
 				</Properties>
 			</EnumValue>
-			<EnumValue uuid="9f53201f-73d7-5881-892d-802de91acfa1">
+			<EnumValue uuid="2d7df521-e367-49c6-8d7d-1dff66a5002b">
 				<Properties>
 					<Name>ПереданКурьеру</Name>
 					<Synonym>
@@ -63,9 +74,23 @@
 						</v8:item>
 					</Synonym>
 					<Comment/>
+					<Color>auto</Color>
 				</Properties>
 			</EnumValue>
-			<EnumValue uuid="e4219c20-862b-508a-9ddd-c90715dbdf31">
+			<EnumValue uuid="c3695203-bca5-4ef1-80f0-b41157036d83">
+				<Properties>
+					<Name>ВРаботе</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>В работе</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Color>auto</Color>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="b9e7d2ac-52fe-4042-b8c5-fc419a22f923">
 				<Properties>
 					<Name>Доставлен</Name>
 					<Synonym>
@@ -75,9 +100,10 @@
 						</v8:item>
 					</Synonym>
 					<Comment/>
+					<Color>auto</Color>
 				</Properties>
 			</EnumValue>
-			<EnumValue uuid="dfdba32d-6c52-513d-b51e-94a209eefb33">
+			<EnumValue uuid="627b9deb-1aeb-4951-8fc3-cbf4685403b6">
 				<Properties>
 					<Name>Отменен</Name>
 					<Synonym>
@@ -87,6 +113,7 @@
 						</v8:item>
 					</Synonym>
 					<Comment/>
+					<Color>auto</Color>
 				</Properties>
 			</EnumValue>
 		</ChildObjects>

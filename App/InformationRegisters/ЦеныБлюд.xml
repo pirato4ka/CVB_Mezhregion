@@ -1,34 +1,34 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
-	<InformationRegister uuid="997d34dc-1c55-544a-8fc3-95da66973ec5">
+	<InformationRegister uuid="965e1aac-d724-466f-aba9-a84e4a3840e7">
 		<InternalInfo>
 			<xr:GeneratedType name="InformationRegisterRecord.ЦеныБлюд" category="Record">
-				<xr:TypeId>f1a23002-d9b3-5078-a804-ae02abb4ced6</xr:TypeId>
-				<xr:ValueId>19b15657-dc1f-579d-9407-8d97692e148a</xr:ValueId>
+				<xr:TypeId>f3fc927a-14f7-471b-9ea0-d113ec438329</xr:TypeId>
+				<xr:ValueId>37ed164c-dd7e-4195-980d-3191b6163eff</xr:ValueId>
 			</xr:GeneratedType>
 			<xr:GeneratedType name="InformationRegisterManager.ЦеныБлюд" category="Manager">
-				<xr:TypeId>8f91e4e0-55c5-5d3b-8b1c-a8b72c965963</xr:TypeId>
-				<xr:ValueId>b3c2e071-e84b-594d-83bb-27f463033cd3</xr:ValueId>
+				<xr:TypeId>424965fe-99b3-44f7-bb9e-0bd3bc96b7e2</xr:TypeId>
+				<xr:ValueId>7f739fe7-16d9-4283-ad2c-494d6b7a6a8b</xr:ValueId>
 			</xr:GeneratedType>
 			<xr:GeneratedType name="InformationRegisterSelection.ЦеныБлюд" category="Selection">
-				<xr:TypeId>bfe85919-0e5f-582a-bc8e-59e29d4e40a2</xr:TypeId>
-				<xr:ValueId>2571c704-746d-52af-a866-fa1c701cb90c</xr:ValueId>
+				<xr:TypeId>737df746-3474-439f-bb1e-e6e4c66a8707</xr:TypeId>
+				<xr:ValueId>b2c0065d-a40b-45dd-ba4a-c44a564bec0b</xr:ValueId>
 			</xr:GeneratedType>
 			<xr:GeneratedType name="InformationRegisterList.ЦеныБлюд" category="List">
-				<xr:TypeId>3a61645b-2645-5dc7-81d9-36e5a8d5c290</xr:TypeId>
-				<xr:ValueId>10b2b48b-fdb2-573c-9323-499b7f996de9</xr:ValueId>
+				<xr:TypeId>713f4151-4f30-4db5-ad9e-679f677b6c80</xr:TypeId>
+				<xr:ValueId>6362a70b-070b-4578-8710-7d1e456afa82</xr:ValueId>
 			</xr:GeneratedType>
 			<xr:GeneratedType name="InformationRegisterRecordSet.ЦеныБлюд" category="RecordSet">
-				<xr:TypeId>aa6e3556-d544-5150-a9b1-58b20964d65c</xr:TypeId>
-				<xr:ValueId>71ed2e38-f853-5ed9-b386-a9d4a9963356</xr:ValueId>
+				<xr:TypeId>be0e15b3-933a-4879-9918-5dd68df070f2</xr:TypeId>
+				<xr:ValueId>2a4bd1c0-218d-4195-b8b2-d6da644dc41f</xr:ValueId>
 			</xr:GeneratedType>
 			<xr:GeneratedType name="InformationRegisterRecordKey.ЦеныБлюд" category="RecordKey">
-				<xr:TypeId>049dc7b4-bdf5-5a4d-9e21-d7be3bb17102</xr:TypeId>
-				<xr:ValueId>90a5c935-57e2-5001-b42b-2df1e5f22b2b</xr:ValueId>
+				<xr:TypeId>5dbfce4d-1357-40db-bfb9-69ed9f78c698</xr:TypeId>
+				<xr:ValueId>7326a083-e164-4d21-bd0e-9b8c5ca202e5</xr:ValueId>
 			</xr:GeneratedType>
 			<xr:GeneratedType name="InformationRegisterRecordManager.ЦеныБлюд" category="RecordManager">
-				<xr:TypeId>497b5fcd-6551-5c56-b417-418263b84a70</xr:TypeId>
-				<xr:ValueId>2c4f1375-05e7-5c94-bf8f-fa5c8f2a800d</xr:ValueId>
+				<xr:TypeId>a1514bf8-2cb9-4de0-ba26-d13e33b10432</xr:TypeId>
+				<xr:ValueId>76290392-22cc-470d-be50-0eda88a00c94</xr:ValueId>
 			</xr:GeneratedType>
 		</InternalInfo>
 		<Properties>
@@ -42,25 +42,29 @@
 			<Comment/>
 			<UseStandardCommands>true</UseStandardCommands>
 			<EditType>InDialog</EditType>
-			<DefaultRecordForm>InformationRegister.ЦеныБлюд.Form.ФормаЗаписи</DefaultRecordForm>
-			<DefaultListForm/>
+			<DefaultRecordForm/>
+			<DefaultListForm>InformationRegister.ЦеныБлюд.Form.ФормаСписка</DefaultListForm>
 			<AuxiliaryRecordForm/>
 			<AuxiliaryListForm/>
-			<InformationRegisterPeriodicity>Day</InformationRegisterPeriodicity>
+			<InformationRegisterPeriodicity>Second</InformationRegisterPeriodicity>
 			<WriteMode>Independent</WriteMode>
 			<MainFilterOnPeriod>true</MainFilterOnPeriod>
-			<FullTextSearch>Use</FullTextSearch>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<DataLockControlMode>Managed</DataLockControlMode>
+			<FullTextSearch>DontUse</FullTextSearch>
 			<EnableTotalsSliceFirst>false</EnableTotalsSliceFirst>
 			<EnableTotalsSliceLast>false</EnableTotalsSliceLast>
-			<IncludeHelpInContents>false</IncludeHelpInContents>
-			<DataHistory>DontUse</DataHistory>
+			<RecordPresentation/>
+			<ExtendedRecordPresentation/>
 			<ListPresentation/>
 			<ExtendedListPresentation/>
 			<Explanation/>
+			<DataHistory>DontUse</DataHistory>
+			<UpdateDataHistoryImmediatelyAfterWrite>false</UpdateDataHistoryImmediatelyAfterWrite>
+			<ExecuteAfterWriteDataHistoryVersionProcessing>false</ExecuteAfterWriteDataHistoryVersionProcessing>
 		</Properties>
 		<ChildObjects>
-			<Resource uuid="ff57c300-71a0-5183-afb0-bf41cdb12244">
+			<Resource uuid="f79e1d5d-8371-4e74-a8b0-c56864829265">
 				<Properties>
 					<Name>Цена</Name>
 					<Synonym>
@@ -75,25 +79,22 @@
 						<v8:NumberQualifiers>
 							<v8:Digits>15</v8:Digits>
 							<v8:FractionDigits>2</v8:FractionDigits>
-							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+							<v8:AllowedSign>Any</v8:AllowedSign>
 						</v8:NumberQualifiers>
 					</Type>
 					<PasswordMode>false</PasswordMode>
 					<Format/>
 					<EditFormat/>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Цена блюда, действует с даты записи</v8:content>
-						</v8:item>
-					</ToolTip>
+					<ToolTip/>
 					<MarkNegatives>false</MarkNegatives>
 					<Mask/>
 					<MultiLine>false</MultiLine>
 					<ExtendedEdit>false</ExtendedEdit>
+					<MinValue xsi:nil="true"/>
+					<MaxValue xsi:nil="true"/>
 					<FillFromFillingValue>false</FillFromFillingValue>
 					<FillValue xsi:nil="true"/>
-					<FillChecking>ShowError</FillChecking>
+					<FillChecking>DontCheck</FillChecking>
 					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
 					<ChoiceParameterLinks/>
 					<ChoiceParameters/>
@@ -107,7 +108,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Resource>
-			<Dimension uuid="a718db1a-b74b-504d-af5d-6df2f2792248">
+			<Dimension uuid="431617b3-b005-472c-90f2-382c5961a11f">
 				<Properties>
 					<Name>Блюдо</Name>
 					<Synonym>
@@ -123,13 +124,16 @@
 					<PasswordMode>false</PasswordMode>
 					<Format/>
 					<EditFormat/>
+					<ToolTip/>
 					<MarkNegatives>false</MarkNegatives>
 					<Mask/>
 					<MultiLine>false</MultiLine>
 					<ExtendedEdit>false</ExtendedEdit>
+					<MinValue xsi:nil="true"/>
+					<MaxValue xsi:nil="true"/>
 					<FillFromFillingValue>false</FillFromFillingValue>
 					<FillValue xsi:nil="true"/>
-					<FillChecking>ShowError</FillChecking>
+					<FillChecking>DontCheck</FillChecking>
 					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
 					<ChoiceParameterLinks/>
 					<ChoiceParameters/>
@@ -138,15 +142,16 @@
 					<ChoiceForm/>
 					<LinkByType/>
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+					<Master>false</Master>
+					<MainFilter>true</MainFilter>
+					<DenyIncompleteValues>false</DenyIncompleteValues>
 					<Indexing>DontIndex</Indexing>
 					<FullTextSearch>Use</FullTextSearch>
 					<DataHistory>Use</DataHistory>
-					<Master>true</Master>
-					<MainFilter>true</MainFilter>
-					<DenyIncompleteValues>true</DenyIncompleteValues>
+					<TypeReductionMode>TransformValues</TypeReductionMode>
 				</Properties>
 			</Dimension>
-			<Form>ФормаЗаписи</Form>
+			<Form>ФормаСписка</Form>
 		</ChildObjects>
 	</InformationRegister>
 </MetaDataObject>

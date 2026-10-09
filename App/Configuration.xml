@@ -1,44 +1,39 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
-	<Configuration uuid="a7b69562-3134-47ab-8c66-65db74ee91c0">
+	<Configuration uuid="92b2e505-3ebe-4146-8d27-3e3c98b80240">
 		<InternalInfo>
 			<xr:ContainedObject>
 				<xr:ClassId>9cd510cd-abfc-11d4-9434-004095e12fc7</xr:ClassId>
-				<xr:ObjectId>44465731-3ee4-4ee2-9bfb-92e69f5b71fc</xr:ObjectId>
+				<xr:ObjectId>ba471afd-2e19-498f-888e-e47df79ce5f3</xr:ObjectId>
 			</xr:ContainedObject>
 			<xr:ContainedObject>
 				<xr:ClassId>9fcd25a0-4822-11d4-9414-008048da11f9</xr:ClassId>
-				<xr:ObjectId>b046248b-608d-42a4-9541-a979ca5381d0</xr:ObjectId>
+				<xr:ObjectId>4fe24fe4-b97b-4570-99b3-563546b1a992</xr:ObjectId>
 			</xr:ContainedObject>
 			<xr:ContainedObject>
 				<xr:ClassId>e3687481-0a87-462c-a166-9f34594f9bba</xr:ClassId>
-				<xr:ObjectId>76451b18-8a37-4980-b80b-77061011305f</xr:ObjectId>
+				<xr:ObjectId>5504e93a-94f1-4ecf-aca7-a87b6303002e</xr:ObjectId>
 			</xr:ContainedObject>
 			<xr:ContainedObject>
 				<xr:ClassId>9de14907-ec23-4a07-96f0-85521cb6b53b</xr:ClassId>
-				<xr:ObjectId>6ab27414-2b2d-4712-b7a7-feefa4b0ff64</xr:ObjectId>
+				<xr:ObjectId>f1745d8e-cfbc-4abe-aacd-63333999cc67</xr:ObjectId>
 			</xr:ContainedObject>
 			<xr:ContainedObject>
 				<xr:ClassId>51f2d5d8-ea4d-4064-8892-82951750031e</xr:ClassId>
-				<xr:ObjectId>a08c6020-fc58-439e-a4d5-e8fabcaa3b3b</xr:ObjectId>
+				<xr:ObjectId>ba6824a7-e8d6-450c-aaa1-e7e20a5a0ac1</xr:ObjectId>
 			</xr:ContainedObject>
 			<xr:ContainedObject>
 				<xr:ClassId>e68182ea-4237-4383-967f-90c1e3370bc7</xr:ClassId>
-				<xr:ObjectId>784b08ca-1bbf-4eb7-a4a8-4d97af28169f</xr:ObjectId>
+				<xr:ObjectId>f9af018f-3921-4005-98bc-35d815ec215c</xr:ObjectId>
 			</xr:ContainedObject>
 			<xr:ContainedObject>
 				<xr:ClassId>fb282519-d103-4dd3-bc12-cb271d631dfc</xr:ClassId>
-				<xr:ObjectId>0a22c88d-3381-4e58-8092-30e027cdb5ab</xr:ObjectId>
+				<xr:ObjectId>1d69c192-c0a0-4ff5-8ead-4ef66776afa5</xr:ObjectId>
 			</xr:ContainedObject>
 		</InternalInfo>
 		<Properties>
-			<Name>ЦВБ_Межрегион</Name>
-			<Synonym>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>ЦВБ межрегион</v8:content>
-				</v8:item>
-			</Synonym>
+			<Name>Конфигурация</Name>
+			<Synonym/>
 			<Comment/>
 			<NamePrefix/>
 			<ConfigurationExtensionCompatibilityMode>Version8_5_1</ConfigurationExtensionCompatibilityMode>
@@ -265,33 +260,30 @@
 		<ChildObjects>
 			<Language>Русский</Language>
 			<Subsystem>Заказы</Subsystem>
-			<Subsystem>Рестораны</Subsystem>
+			<Subsystem>Ресторан</Subsystem>
 			<Subsystem>Меню</Subsystem>
-			<Subsystem>Курьеры</Subsystem>
+			<Subsystem>Курьер</Subsystem>
 			<Subsystem>Отчеты</Subsystem>
-			<CommonPicture>ИконкаЗаказы</CommonPicture>
-			<CommonPicture>ИконкаРестораны</CommonPicture>
-			<CommonPicture>ИконкаМеню</CommonPicture>
-			<CommonPicture>ИконкаКурьеры</CommonPicture>
-			<CommonPicture>ИконкаОтчеты</CommonPicture>
+			<Subsystem>Интегрирование</Subsystem>
 			<Role>Администратор</Role>
 			<Role>Менеджер</Role>
 			<Role>Диспетчер</Role>
+			<CommonCommand>РабочееМестоДиспетчера</CommonCommand>
+			<CommonForm>Форма</CommonForm>
 			<Catalog>Рестораны</Catalog>
 			<Catalog>КатегорииБлюд</Catalog>
 			<Catalog>Блюда</Catalog>
 			<Catalog>Клиенты</Catalog>
 			<Catalog>Курьеры</Catalog>
 			<Document>Заказ</Document>
-			<Enum>ТипыТранспорта</Enum>
-			<Enum>СтатусыКурьеров</Enum>
 			<Enum>СтатусыЗаказов</Enum>
+			<Enum>СтатусыКурьера</Enum>
+			<Enum>ТипыТранспорта</Enum>
 			<Report>ОтчетПоЗаказам</Report>
 			<Report>ОтчетПоРесторанам</Report>
-			<Report>ОтчетПоКурьерам</Report>
-			<Report>ПопулярностьБлюд</Report>
-			<DataProcessor>АРМДиспетчера</DataProcessor>
+			<DataProcessor>РабочееМестоДиспетчера</DataProcessor>
 			<InformationRegister>ЦеныБлюд</InformationRegister>
+			<InformationRegister>ЛогAPI</InformationRegister>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>
